@@ -1,0 +1,57 @@
+<!-- The edit article view -->
+<section data-ng-controller="playersController" data-ng-init="findOne()">
+    <h1>Edit Player</h1>
+    <!-- The edited article form -->
+    <form data-ng-submit="update()" novalidate>
+ <label for=name>Name</label>
+            <div>
+                <input type="text" data-ng-model="player.name" id="name" placeholder="name" required>
+            </div>
+        </div>
+        <div>
+            <label for=position>N</label>
+            <div>
+                <input type="text" data-ng-model="player.position" id="position" placeholder="position" required>
+            </div>
+        </div>
+        <div>
+            <label for="overall">overall</label>
+            <div>
+                <input type="number" data-ng-model="player.overall" id="overall"  placeholder="overall" required>
+            </div>
+        </div>
+        <div>
+            <label for="speed">speed</label>
+            <div>
+                <input type="number" data-ng-model="player.speed" id="speed"  placeholder="speed" required>
+            </div>
+        </div>
+        <div>
+            <label for="awareness">awareness</label>
+            <div>
+                <input type="awareness" data-ng-model="player.awareness" id="awareness"  placeholder="awareness" required>
+            </div>
+        </div>
+        <div>
+        <div>
+            <label for="strength">strength</label>
+            <div>
+                <input type="number" data-ng-model="player.strength" id="strength"  placeholder="strength" required>
+            </div>
+        </div>
+        <div>
+            <label for="agility">strength</label>
+            <div>
+                <input type="number" data-ng-model="player.agility" id="agility"  placeholder="agility" required>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Update">
+        </div>
+        <!-- The error message element -->
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+    </div>
+</section>

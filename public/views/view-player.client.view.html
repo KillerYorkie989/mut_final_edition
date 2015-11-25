@@ -1,0 +1,15 @@
+<!-- The article view -->
+<section data-ng-controller="playersController" data-ng-init="findOne()">
+    <h1 data-ng-bind="player.name"></h1>
+    <!-- Show the editing buttons to the player creator -->
+    <div data-ng-show="authentication.user._id == player.creator._id">
+        <a href="/#!/players/{{player._id}}/edit">edit</a>
+        <a href="#" data-ng-click="delete();">delete</a>
+    </div>
+    
+    <p data-ng-bind="player.overall"></p>
+    <p data-ng-bind="player.speed"></p>
+    <p data-ng-bind="player.awareness"></p>
+    <p data-ng-bind="player.strength"></p>
+    <p data-ng-bind="player.agility"></p>
+</section>

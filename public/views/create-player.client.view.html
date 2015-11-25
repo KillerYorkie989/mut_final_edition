@@ -1,0 +1,56 @@
+<!-- The create article view -->
+<section data-ng-controller="playersController">
+    <h1>New Player</h1>
+    <!-- The new player form -->
+    <form data-ng-submit="create()" novalidate>
+        <div>
+            <label for=name>Name</label>
+            <div>
+                <input type="text" data-ng-model="name" id="name" placeholder="name" required>
+            </div>
+        </div>
+        <div>
+            <label for=position>N</label>
+            <div>
+                <input type="text" data-ng-model="position" id="position" placeholder="position" required>
+            </div>
+        </div>
+        <div>
+            <label for="overall">overall</label>
+            <div>
+                <input type="number" data-ng-model="overall" id="overall"  placeholder="overall" required>
+            </div>
+        </div>
+        <div>
+            <label for="speed">speed</label>
+            <div>
+                <input type="number" data-ng-model="speed" id="speed"  placeholder="speed" required>
+            </div>
+        </div>
+        <div>
+            <label for="awareness">awareness</label>
+            <div>
+                <input type="awareness" data-ng-model="awareness" id="awareness"  placeholder="awareness" required>
+            </div>
+        </div>
+        <div>
+        <div>
+            <label for="strength">strength</label>
+            <div>
+                <input type="number" data-ng-model="strength" id="strength"  placeholder="strength" required>
+            </div>
+        </div>
+        <div>
+            <label for="agility">strength</label>
+            <div>
+                <input type="number" data-ng-model="agility" id="agility"  placeholder="agility" required>
+            </div>
+        </div>
+            <input type="submit">
+        </div>
+        <!-- The error message element -->
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+</section>
